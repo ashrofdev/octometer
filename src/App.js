@@ -1,10 +1,40 @@
 import React from 'react';
-import './App.scss';
+import './Styles/main.scss';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import Admin from './Dashboards/Admin'
+import Stakeholder from './Dashboards/Stakeholders'
+import Subscriber from './Dashboards/Subscribers'
+import SignIn from './Components/SignIn'
 
 function App() {
   return (
     <div className="App">
-      Here goes the big big app 😵
+      <Router>
+
+        {/* {
+          this.state.isAuthenticated?
+          <Redirect to="/admin"/>:
+          <Redirect to="/"/>
+        } */}
+
+        <Switch>
+          {/* <Route path="/resetpassword">
+            <ResetPassword/>
+          </Route> */}
+          <Route path="/admin">
+            <Admin/>
+          </Route>
+          <Route path="/stakeholder">
+            <Stakeholder/>
+          </Route>
+          <Route path="/subscriber">
+            <Subscriber/>
+          </Route>
+          <Route path="/">
+            <SignIn/>
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
