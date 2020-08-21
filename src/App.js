@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Styles/main.scss';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import Admin from './Dashboards/Admin'
@@ -6,37 +6,50 @@ import Stakeholder from './Dashboards/Stakeholders'
 import Subscriber from './Dashboards/Subscribers'
 import SignIn from './Components/SignIn'
 
-function App() {
-  return (
-    <div className="App">
-      <Router>
 
-        {/* {
-          this.state.isAuthenticated?
-          <Redirect to="/admin"/>:
-          <Redirect to="/"/>
-        } */}
+class App extends Component {
 
-        <Switch>
-          {/* <Route path="/resetpassword">
-            <ResetPassword/>
-          </Route> */}
-          <Route path="/admin">
-            <Admin/>
-          </Route>
-          <Route path="/stakeholder">
-            <Stakeholder/>
-          </Route>
-          <Route path="/subscriber">
-            <Subscriber/>
-          </Route>
-          <Route path="/">
-            <SignIn/>
-          </Route>
-        </Switch>
-      </Router>
-    </div>
-  );
+  state = {
+    isAuth: false
+  }
+
+  signin = (e)=>{
+    e.preventDefault()
+    this.setState({isAuth: true})
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Router>
+  
+          {
+            this.state.isAuth?
+            <Redirect to="/admin"/>:
+            <Redirect to="/"/>
+          }
+  
+          <Switch>
+            {/* <Route path="/resetpassword">
+              <ResetPassword/>
+            </Route> */}
+            <Route path="/admin">
+              <Admin/>
+            </Route>
+            <Route path="/stakeholder">
+              <Stakeholder/>
+            </Route>
+            <Route path="/subscriber">
+              <Subscriber/>
+            </Route>
+            <Route path="/">
+              <SignIn signin={this.signin}/>
+            </Route>
+          </Switch>
+        </Router>
+      </div>
+    );
+  }
 }
 
 export default App;

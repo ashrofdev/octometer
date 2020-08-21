@@ -6,7 +6,7 @@ import { Redirect, Link } from 'react-router-dom';
 class SignIn extends Component {
     render() {
         return (
-            <div>
+            <div className="signin_container">
                  <form onSubmit={this.props.signin} className="signin">
                     <header>
                         <h1 className="heading">Octometer</h1>

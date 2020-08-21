@@ -1,94 +1,102 @@
-.signin {
-    background-color: rgba(255, 255, 255, 0.13);
-    padding: 2rem 1rem;
-    animation: signin infinite 2s alternate;
-    width: 30rem;
-    color: white;
-    margin-top: 50vh;
-    margin-left: 50vw;
-    transform: translate(-50%,-50%);
+.signin_container {
+    background-color: rgb(4, 1, 29);
+    height: 100vh;
 
-    &  header {
-        padding: 1rem;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        color: $black;
-
-        &  .heading {
-            margin-left: 1rem;
-            color: $primary-color;
-
-        }
-
-        
-    }
-    &  .form {
-        padding: 0 2rem;
-        margin-bottom: 3rem;
-
-        &  div {
+    &  .signin {
+        padding: 2rem 1rem;
+        animation: signin infinite 2s alternate;
+        width: 30rem;
+        color: white;
+        position: fixed;
+        top: 50vh;
+        left: 50vw;
+        transform: translate(-50%,-50%);
+        border: 1px solid rgb(30, 30, 65);
+    
+        &  header {
+            padding: 1rem;
             display: flex;
+            justify-content: flex-start;
             align-items: center;
-            margin: 4rem 0;
-
-            &  .input {
-                padding: 1rem;
-                font-size: 1.5rem;
-                margin-left: 2rem;
-                outline-color: $primary-color;
-            }
-        }
-
-        
-
-        &  .cta {
-            display: flex;
-            align-items: center;
-            margin: 0;
-            
-            &  button {
-                margin-bottom: 2rem;
-            }
-
-            &  .loader {
-                width: 3rem;
-                margin: 0;
-                padding: 0;
-                align-self: flex-start;
-                margin-right: 2rem;
-            }
-        }
-
-        &  p {
-            color: $lightgray;
-            font-size: 1.2rem;
-            font-style: italic;
-
-            &  .link {
+            color: $black;
+    
+            &  .heading {
+                margin-left: 1rem;
                 color: $primary-color;
-                text-align: right;
-                align-self: flex-end;
+            }
+    
+            
+        }
+        &  .form {
+            padding: 0 2rem;
+            margin-bottom: 3rem;
+    
+            &  div {
+                display: flex;
+                align-items: center;
+                margin: 4rem 0;
+    
+                &  .input {
+                    padding: 1rem 2rem;
+                    font-size: 1.5rem;
+                    margin-left: 2rem;
+                    outline: none;
+                    background-color: transparent;
+                    border: 1px solid rgb(30, 30, 65);
+                    color: $white;
+                }
+            }
+    
+            
+    
+            &  .cta {
+                display: flex;
+                align-items: center;
+                margin: 0;
+                
+                &  button {
+                    margin-bottom: 2rem;
+                }
+    
+                &  .loader {
+                    width: 3rem;
+                    margin: 0;
+                    padding: 0;
+                    align-self: flex-start;
+                    margin-right: 2rem;
+                }
+            }
+    
+            &  p {
+                color: $lightgray;
+                font-size: 1.2rem;
+                font-style: italic;
+    
+                &  .link {
+                    color: $primary-color;
+                    text-align: right;
+                    align-self: flex-end;
+                }
             }
         }
-    }
-}.error {
-    font-size: 1.5rem;
-    color: rgb(255, 255, 255);
-    font-style: italic;
-    font-weight: 100;
-    position: absolute;
-    bottom: 2rem;
-    right: 2rem;
-    padding: 1rem 2rem;
-    border-radius: 5rem;
-    border-bottom-right-radius: 0;
-    background-color: rgba(255, 0, 0, 0.288);
-
-    @media only screen and (max-width: $bpsmallest) {
-        background-color: rgba(255, 0, 0, 0.651);
-        bottom: 1rem;
-        right: 1rem;
-        border-radius: 0;
+    }.error {
+        font-size: 1.5rem;
+        color: rgb(255, 255, 255);
+        font-style: italic;
+        font-weight: 100;
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
+        padding: 1rem 2rem;
+        border-radius: 5rem;
+        border-bottom-right-radius: 0;
+        background-color: rgba(255, 0, 0, 0.288);
+    
+        @media only screen and (max-width: $bpsmallest) {
+            background-color: rgba(255, 0, 0, 0.651);
+            bottom: 1rem;
+            right: 1rem;
+            border-radius: 0;
+        }
     }
 }
