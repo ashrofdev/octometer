@@ -1,14 +1,12 @@
 .signin {
+    background-color: rgba(255, 255, 255, 0.13);
     padding: 2rem 1rem;
     animation: signin infinite 2s alternate;
-    background-color: white;
     width: 30rem;
     color: white;
     margin-top: 50vh;
     margin-left: 50vw;
     transform: translate(-50%,-50%);
-    border: 1rem solid blue($color: #000000);
-    box-shadow: 3px 3px 2rem rgb(172, 172, 172);
 
     &  header {
         padding: 1rem;
