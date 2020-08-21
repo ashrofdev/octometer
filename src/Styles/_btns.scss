@@ -4,7 +4,7 @@ button {
     transition: all .5s;
 }
 .primary_btn {
-    background-color: $secondary-blue;
+    background-color: $secondary-color;
     padding: 1rem 3rem;
     font-size: 1.3rem;
     border: none;
@@ -15,7 +15,7 @@ button {
     }
 }
 .primary_btn_orange {
-    background-color: $secondary-orange;
+    background-color: $secondary-color;
     padding: 1rem 3rem;
     font-size: 1.3rem;
     border: none;

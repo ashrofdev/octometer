@@ -15,20 +15,10 @@
         align-items: center;
         color: $black;
 
-        &  .logo {
-            width: 5rem;
-        }
-
         &  .heading {
             margin-left: 1rem;
-            color: $primary-orange;
+            color: $primary-color;
 
-            &  span {
-                background-image: linear-gradient(to right, $primary-red 65%, $primary-blue 70%);
-                display: block;
-                color: transparent;
-                background-clip: text;
-            }
         }
 
         
@@ -46,7 +36,7 @@
                 padding: 1rem;
                 font-size: 1.5rem;
                 margin-left: 2rem;
-                outline-color: $primary-blue;
+                outline-color: $primary-color;
             }
         }
 
@@ -76,7 +66,7 @@
             font-style: italic;
 
             &  .link {
-                color: $primary-orange;
+                color: $primary-color;
                 text-align: right;
                 align-self: flex-end;
             }
