@@ -1,0 +1,38 @@
+.roles {
+
+    &  .heading {
+
+        margin: 2rem 0;
+    }
+
+    &  .empty-list {
+        font-size: 1.5rem;
+        padding: 2rem 0;
+    }
+
+    &  .list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem;
+        margin: 2rem 0;
+        height: 55vh;
+        overflow: scroll;
+
+
+        &  .role {
+            padding: 2rem;
+            box-shadow: 1px 1px 5px rgb(66, 66, 66);
+
+            &  .name {
+                font-weight: 700;
+                font-size: 1.5rem;
+                padding: 1rem 0;
+            }
+            &  .description {
+                font-size: 1.5rem;
+                padding-bottom: 2rem;
+            }
+
+        }
+    }
+}

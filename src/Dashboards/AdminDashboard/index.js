@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import FontAwesome from 'react-fontawesome';
 import { BrowserRouter as Router, Link, Switch, Route, Redirect } from 'react-router-dom';
 import Stakeholders from './Stakeholders';
+import Roles from './Roles';
 
 class Admin extends Component {
 
@@ -77,7 +78,7 @@ class Admin extends Component {
                                 this.state.page==='Stakeholders'?
                                     <Stakeholders/>:
                                 this.state.page==='Roles'?
-                                    'page two -----Start coding the page section when you see this-----':
+                                    <Roles/>:
                                 this.state.page==='assignroles'?
                                     'page three -----Start coding the page section when you see this-----':null
                             }
