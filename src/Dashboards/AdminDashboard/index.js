@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import FontAwesome from 'react-fontawesome';
 import { BrowserRouter as Router, Link, Switch, Route, Redirect } from 'react-router-dom';
+import Stakeholders from './Stakeholders';
 
 class Admin extends Component {
 
     state = {
-        page: 'One'
+        page: 'Stakeholders'
     }
 
     changePage = (page) => {
@@ -40,28 +41,28 @@ class Admin extends Component {
                             <nav className="nav">
                                 <ul className="list">
                                     {
-                                        this.state.page==='One'?
-                                        <li className="clicked"  onClick={()=>this.changePage('One')}>
-                                        <FontAwesome className="font" name="street-view"/><span className="text">One</span></li>
+                                        this.state.page==='Stakeholders'?
+                                        <li className="clicked"  onClick={()=>this.changePage('Stakeholders')}>
+                                        <FontAwesome className="font" name="street-view"/><span className="text">Stakeholders</span></li>
                                         :
-                                        <li className="One"  onClick={()=>this.changePage('One')}>
-                                        <FontAwesome className="font" name="street-view"/><span className="text">One</span></li>
+                                        <li className="Stakeholders"  onClick={()=>this.changePage('Stakeholders')}>
+                                        <FontAwesome className="font" name="street-view"/><span className="text">Stakeholders</span></li>
                                     }
                                     {
-                                        this.state.page==='Two'?
-                                        <li className="clicked"  onClick={()=>this.changePage('Two')}>
-                                        <FontAwesome className="font" name="tasks"/><span className="text">Two</span></li>
+                                        this.state.page==='Roles'?
+                                        <li className="clicked"  onClick={()=>this.changePage('Roles')}>
+                                        <FontAwesome className="font" name="tasks"/><span className="text">Roles</span></li>
                                         :
-                                        <li className="Two"  onClick={()=>this.changePage('Two')}>
-                                        <FontAwesome className="font" name="tasks"/><span className="text">Two</span></li>
+                                        <li className="Roles"  onClick={()=>this.changePage('Roles')}>
+                                        <FontAwesome className="font" name="tasks"/><span className="text">Roles</span></li>
                                     }
                                     {
-                                        this.state.page==='Three'?
-                                        <li className="clicked"  onClick={()=>this.changePage('Three')}>
-                                        <FontAwesome className="font" name="tasks"/><span className="text">Three</span></li>
+                                        this.state.page==='assignroles'?
+                                        <li className="clicked"  onClick={()=>this.changePage('assignroles')}>
+                                        <FontAwesome className="font" name="tasks"/><span className="text">Assign roles</span></li>
                                         :
-                                        <li className="Three"  onClick={()=>this.changePage('Three')}>
-                                        <FontAwesome className="font" name="tasks"/><span className="text">Three</span></li>
+                                        <li className="Assign roles"  onClick={()=>this.changePage('assignroles')}>
+                                        <FontAwesome className="font" name="tasks"/><span className="text">Assign roles</span></li>
                                     }
                                     
                                 </ul>
@@ -73,11 +74,11 @@ class Admin extends Component {
                         {/* content to be displayed */}
                         <section className="content">
                             {
-                                this.state.page==='One'?
-                                    'page one -----Start coding the page section when you see this-----':
-                                this.state.page==='Two'?
+                                this.state.page==='Stakeholders'?
+                                    <Stakeholders/>:
+                                this.state.page==='Roles'?
                                     'page two -----Start coding the page section when you see this-----':
-                                this.state.page==='Three'?
+                                this.state.page==='assignroles'?
                                     'page three -----Start coding the page section when you see this-----':null
                             }
                         </section>

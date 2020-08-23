@@ -1,8 +1,14 @@
 ////// Variables
 @import './variables';
 
-@import './btns';
-@import './dashboard';
-@import './sidebar';
+///// components
+@import './components/btns';
+
+/////admin dashboard
+@import './admin_dashboard/dashboard';
+@import './admin_dashboard/sidebar';
+@import './admin_dashboard/stakeholders';
+
+
 @import './Signin';
 @import './App';

@@ -1,0 +1,26 @@
+.stakeholders {
+
+
+    &  .list {
+        width: 65%;
+        height: 70vh;
+        overflow: scroll;
+
+        &  .heading {
+
+            margin: 2rem 0;
+        }
+
+        &  .stakeholder {
+            padding: 1rem 2rem;
+            padding-left: .5rem;
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.5rem;
+            border:  1px solid $lightgray;
+            margin-bottom: 1rem;
+            border-left-width: .5rem;
+
+        }
+    }
+}

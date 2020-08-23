@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './Styles/main.scss';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
-import Admin from './Dashboards/Admin'
-import Stakeholder from './Dashboards/Stakeholders'
-import Subscriber from './Dashboards/Subscribers'
+import Admin from './Dashboards/AdminDashboard/index'
+import Stakeholder from './Dashboards/StakeholdersDashboard/index'
+import Subscriber from './Dashboards/SubscribersDashboard/index'
 import SignIn from './Components/SignIn'
 
 
